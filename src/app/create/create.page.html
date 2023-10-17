@@ -1,0 +1,51 @@
+<!-- <ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Create Cerbung</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Create Cerbung
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Create Cerbung</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-list>
+    <ion-item>
+      <ion-label position="floating">Cerbung Title</ion-label>
+      <ion-input type="text" [(ngModel)]="cerbung.cerbungtitle" name="cerbungtitle" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Short Description</ion-label>
+      <ion-textarea [(ngModel)]="cerbung.shortdescription" name="shortdescription" required></ion-textarea>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Cerbung Image Cover</ion-label>
+      <ion-input type="text" [(ngModel)]="cerbung.cerbungimagecover" name="cerbungimagecover" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Choose Genre</ion-label>
+      <ion-select [(ngModel)]="cerbung.choosegenere" name="choosegenere" required>
+        <ion-select-option value="Misteri">Misteri</ion-select-option>
+        <ion-select-option value="Aksi">Aksi</ion-select-option>
+        <ion-select-option value="Comedy">Comedy</ion-select-option>
+        <!-- Tambahkan lebih banyak opsi genre sesuai kebutuhan -->
+      </ion-select>
+    </ion-item>
+    <!-- Tambahkan lebih banyak field sesuai kebutuhan -->
+  </ion-list>
+
+  <ion-button expand="full" (click)="createCerbung()">Create</ion-button>
+</ion-content>

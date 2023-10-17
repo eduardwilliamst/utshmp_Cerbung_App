@@ -1,0 +1,18 @@
+/* CSS untuk tombol logout berbentuk bulat */
+.round-logout-button {
+    width: 50px; /* Lebar tombol */
+    height: 50px; /* Tinggi tombol */
+    border-radius: 50%; /* Membuat tombol berbentuk bulat */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f44336; /* Warna latar belakang tombol */
+    color: #fff; /* Warna teks tombol */
+    font-size: 24px; /* Ukuran ikon */
+    cursor: pointer;
+}
+
+  /* CSS untuk ikon FontAwesome */
+ion-icon[name="log-out"] {
+    font-family: 'Font Awesome 5 Free'; /* Font family untuk ikon FontAwesome */
+}

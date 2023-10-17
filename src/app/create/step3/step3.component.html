@@ -1,0 +1,44 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Create Cerbung - Step 3
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item>
+      <ion-label>ID</ion-label>
+      <ion-note slot="end">{{ cerbung.id }}</ion-note>
+    </ion-item>
+    <ion-item>
+      <ion-label>Title</ion-label>
+      <ion-note slot="end">{{ cerbung.title }}</ion-note>
+    </ion-item>
+    <ion-item>
+      <ion-label>Content</ion-label>
+      <ion-note slot="end">{{ cerbung.shortDescription }}</ion-note>
+    </ion-item>
+    <ion-item>
+      <ion-label>Category</ion-label>
+      <ion-note slot="end">{{ cerbung.genre }}</ion-note>
+    </ion-item>
+    <ion-item>
+      <ion-label>URL</ion-label>
+      <ion-note slot="end">
+        <a [href]="cerbung.imageCover" target="_blank">{{ cerbung.imageCover }}</a>
+      </ion-note>
+    </ion-item>
+    <ion-item>
+      <ion-label>By</ion-label>
+      <ion-note slot="end">{{ cerbung.by }}</ion-note>
+    </ion-item>
+  </ion-list>
+
+  <ion-button (click)="prevStep()">Previous</ion-button>
+  <ion-button (click)="saveCerbung()">Save</ion-button>
+</ion-content>

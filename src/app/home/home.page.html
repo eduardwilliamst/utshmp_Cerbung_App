@@ -1,0 +1,51 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Cerbung
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <!-- Input Pencarian -->
+  <ion-searchbar [(ngModel)]="searchQuery" (ionInput)="searchCerbung()"></ion-searchbar>
+
+  <div class="custom-button">
+    <ion-segment [(ngModel)]="jenistampilan" (ionChange)="filterCerbung()">
+      <ion-segment-button value="all">
+        <ion-label>All</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="Aksi">
+        <ion-label>Aksi</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="Horor">
+        <ion-label>Horor</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="Comedy">
+        <ion-label>Kocak</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+
+  <ion-card *ngFor="let cerbung of cerbungDataFiltered">
+    <div style="width: 100%; height: 100px; overflow: hidden;">
+      <img [src]="cerbung.imageCover" style="width: 100%; height: 100%; object-fit: cover;" />
+    </div>
+    <ion-card-header>
+      <ion-card-title>{{ cerbung.title }}</ion-card-title>
+      <ion-card-subtitle>by {{ cerbung.by }}</ion-card-subtitle>
+      <ion-card-subtitle>
+        <ion-icon name="list-outline"></ion-icon>{{ cerbung.paragraphs }}
+        <ion-icon name="thumbs-up-outline"></ion-icon>{{ cerbung.like }}
+      </ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content>
+      {{ cerbung.shortDescription }}
+      <ion-button [routerLink]="['/cerbungdetail', cerbung.id]">Read</ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

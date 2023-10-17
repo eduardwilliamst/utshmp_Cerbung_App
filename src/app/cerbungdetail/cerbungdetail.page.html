@@ -1,0 +1,38 @@
+<!-- <ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Detail Cerbung
+    </ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Cerbung Read
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <img [src]="cerbungs.imageCover" />
+    <ion-card-header>
+      <ion-card-title>{{ cerbungs.title }}</ion-card-title>
+      <ion-card-subtitle>
+        <ion-icon name="list-outline"></ion-icon>{{ cerbungs.paragraphs }}
+        <ion-icon name="thumbs-up-outline"></ion-icon>{{ cerbungs.like }}
+      </ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      {{ cerbungs.firstParagraph }}
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+

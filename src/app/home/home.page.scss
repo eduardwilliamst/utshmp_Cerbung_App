@@ -1,0 +1,62 @@
+#container {
+  text-align: center;
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+#container p {
+  font-size: 16px;
+  line-height: 22px;
+
+  color: #8c8c8c;
+
+  margin: 0;
+}
+
+#container a {
+  text-decoration: none;
+}
+
+.custom-button {
+  --background: white; /* Warna latar belakang tombol (putih) */
+  --border-color: #800080; /* Warna garis tepi tombol (ungu) */
+  --color: #800080; /* Warna teks tombol (ungu) */
+  font-weight: bold; /* Membuat teks tebal */
+}
+
+ion-card {
+  margin: 10px; /* Memberikan jarak antara kartu */
+  border-radius: 15px; /* Memberikan sudut bulat pada kartu */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan kartu */
+}
+
+ion-card-content {
+  padding: 10px; /* Memberikan padding di dalam konten kartu */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+ion-button {
+  --background: #007BFF; /* Warna latar belakang tombol */
+  --border-radius: 10px; /* Memberikan sudut bulat hanya di bawah */
+  --color: #fff; /* Warna teks tombol */
+  margin-left: auto;
+  margin-top: 10px; /* Atur jarak dari atas */
+  margin-right: 10px; /* Atur jarak dari kanan */
+}
+
+ion-icon {
+  color: #007BFF; /* Warna ikon (misalnya, warna hati) */
+}
+

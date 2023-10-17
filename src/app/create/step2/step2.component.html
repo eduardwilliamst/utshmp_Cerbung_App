@@ -1,0 +1,38 @@
+<!-- <ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Create Cerbung - Step 2</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Create Cerbung
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item>
+    <ion-label>Access Control</ion-label>
+    <ion-select [(ngModel)]="cerbung.accessControl">
+      <ion-select-option value="public">Public</ion-select-option>
+      <ion-select-option value="restricted">Restricted</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Write First Paragraph</ion-label>
+    <ion-textarea
+      [(ngModel)]="cerbung.firstParagraph"
+      name="firstParagraph"
+      required
+    ></ion-textarea>
+  </ion-item>
+
+  <ion-button (click)="prevStep()">Previous</ion-button>
+  <ion-button (click)="nextStep()">Next</ion-button>
+</ion-content>
