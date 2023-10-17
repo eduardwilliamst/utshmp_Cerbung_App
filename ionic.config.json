@@ -1,0 +1,7 @@
+{
+  "name": "utshmp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
